@@ -1,0 +1,5 @@
+function daysToMinutes (input) {
+let days = Number(input);
+let minutes = days * 1440;
+console.log(minutes);
+}
