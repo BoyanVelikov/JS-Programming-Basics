@@ -1,0 +1,8 @@
+function landscape(input){
+    let squareMeters = Number(input);
+    let priceWithoutDiscount = (squareMeters * 7.61);
+    let discount = priceWithoutDiscount * 0.18;
+    let finalPrice = priceWithoutDiscount - discount;
+    console.log(`The final price is: ${finalPrice} dollars.`);
+    console.log(`The discount is: ${discount} dollars.`);
+}
