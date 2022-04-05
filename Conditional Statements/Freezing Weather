@@ -1,0 +1,6 @@
+function freezingWeather(input) {
+    let degrees = Number(input);
+    if (degrees <= 0) {
+        console.log("Freezing weather!");
+    }
+}
