@@ -1,0 +1,8 @@
+function speedInfo(input) {
+    let speed = Number(input);
+    if (speed <= 30) {
+        console.log("Slow");
+    } else {
+        console.log("Fast");
+    }
+}
