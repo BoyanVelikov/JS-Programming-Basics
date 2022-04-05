@@ -1,0 +1,12 @@
+function tickets(input) {
+    let ticketType = (input);
+    let studentPrice = "$1.00";
+    let regularPrice = "$1.60";
+    if (ticketType === "student") {
+        console.log(studentPrice);
+    } else if (ticketType === "regular") {
+        console.log(regularPrice);
+    } else {
+        console.log("Invalid ticket type!")
+    }
+}
