@@ -1,0 +1,8 @@
+function boilingWater(input) {
+    let temperature = Number(input);
+    if (temperature >= 100.0) {
+        console.log("The water is boiling");
+    } else {
+        console.log("The water is not hot enough");
+    }
+}
