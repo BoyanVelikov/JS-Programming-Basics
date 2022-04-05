@@ -1,0 +1,13 @@
+function evenOrOdd(input) {
+    let number = Number(input);
+    let remainder = number % 2;
+    if (number == 0) {
+        console.log("even");
+    } else {
+        if (remainder == 1) {
+            console.log("odd");
+        } else {
+            console.log("even");
+        }
+    }
+}
