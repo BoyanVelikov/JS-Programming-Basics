@@ -1,0 +1,10 @@
+function foodOrDrink(input) {
+    let result = input;
+    if (result == "curry" || result == "noodles" || result == "sushi" || result == "spaghetti") {
+        console.log("food");
+    } else if (result == "tea" || result == "water" || result == "coffee") {
+        console.log("drink");
+    } else {
+        console.log("unknown");
+    }
+}
