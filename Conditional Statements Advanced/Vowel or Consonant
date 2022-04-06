@@ -1,0 +1,8 @@
+function vowelOrConsonant(input) {
+    let letter = input;
+    if (letter == "a" || letter == "A" || letter == "E" || letter == "e" || letter == "i" || letter == "I" || letter == "o" || letter == "O" || letter == "u" || letter == "U") {
+        console.log("Vowel");
+    } else {
+        console.log("Consonant");
+    }
+}
