@@ -1,0 +1,17 @@
+function productOfThreeNumbers(input) {
+    let a = Number(input[0]);
+    let b = Number(input[1]);
+    let c = Number(input[2]);
+
+    if (a == 0 || b == 0 || c == 0) {
+        console.log("zero");
+    } else if (a < 0 && b < 0 && c < 0) {
+        console.log("negative");
+    } else if ((a < 0 && b < 0) || (a < 0 && c < 0) || (b < 0 && c < 0)) {
+        console.log("positive");
+    } else if (a < 0 || b < 0 || c < 0) {
+        console.log("negative");
+    } else {
+        console.log("positive");
+    }
+}
