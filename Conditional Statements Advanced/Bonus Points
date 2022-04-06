@@ -1,0 +1,13 @@
+function bonusPoints(input) {
+    let points = Number(input);
+    if (points >= 0 && points <= 3) {
+        totalPoints = points + 5;
+        console.log(totalPoints);
+    } else if (points >= 4 && points <= 6) {
+        totalPoints = points + 15;
+        console.log(totalPoints);
+    } else if (points >= 7 && points <= 9) {
+        totalPoints = points + 20;
+        console.log(totalPoints);
+    }
+}
