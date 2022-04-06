@@ -1,0 +1,19 @@
+function marketPlace(input) {
+    if (input[1] == "Weekday") {
+        if (input[0] == "Banana") {
+            console.log("2.50");
+        } else if (input[0] == "Apple") {
+            console.log("1.30");
+        } else if (input[0] == "Kiwi") {
+            console.log("2.20");
+        }
+    } else if (input[1] == "Weekend") {
+        if (input[0] == "Banana") {
+            console.log("2.70");
+        } else if (input[0] == "Apple") {
+            console.log("1.60");
+        } else if (input[0] == "Kiwi") {
+            console.log("3.00");
+        }
+    }
+}
