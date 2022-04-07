@@ -1,0 +1,16 @@
+function atm(balance, withdraw, limit) {
+    let a = Number(balance);
+    let b = Number(withdraw);
+    let c = Number(limit);
+
+    if (b <= c && b <= a) {
+        console.log("The withdraw was successful.");
+    } else if (b > c && b > a) {
+        console.log("The daily limit was exceeded.");
+        console.log("Insufficient availability.");
+    } else if (b > c && b <= a) {
+        console.log("The daily limit was exceeded.");
+    } else {
+        console.log("Insufficient availability.");
+    }
+}
