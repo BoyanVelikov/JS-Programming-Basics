@@ -1,0 +1,17 @@
+function cinema(typeOfMovie, rows, seatsPerRow) {
+    let a = typeOfMovie;
+    let b = Number(rows);
+    let c = Number(seatsPerRow);
+    let d = (b * c);
+    let p = 12;
+    let n = 7.50;
+    let dis = 5;
+
+    if (a === "Premiere") {
+        console.log((p * d).toFixed(2));
+    } else if (a === "Normal") {
+        console.log((n * d).toFixed(2));
+    } else if (a === "Discount") {
+        console.log((dis * d).toFixed(2));
+    }
+}
