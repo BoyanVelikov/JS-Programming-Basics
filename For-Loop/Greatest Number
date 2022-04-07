@@ -1,0 +1,15 @@
+function greatestNumber(n, numbers) {
+    let a = Number(n);
+    let c = 0;
+
+    for (i = 1; i <= n; i += 1) {
+
+        let b = Number(numbers[a - i]);
+        if (b > c) {
+            c = b;
+        }
+
+    }
+    console.log(c);
+
+}
