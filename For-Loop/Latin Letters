@@ -1,0 +1,11 @@
+function latinLetters(startChar, endChar) {
+    let startLetter = startChar.charCodeAt(0);
+    let finalLetter = endChar.charCodeAt(0);
+    let space = " ";
+
+    for (i = startLetter; i <= finalLetter; i++) {
+        space += `${String.fromCharCode(i)} `;
+
+    }
+    console.log(space);
+}
