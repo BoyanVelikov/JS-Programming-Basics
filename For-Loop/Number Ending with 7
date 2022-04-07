@@ -1,0 +1,10 @@
+function numbersEndingWith7(n) {
+    let a = Number(n);
+
+    for (i = 7; i <= a; i++) {
+        let b = i % 10;
+        if (b == 7) {
+            console.log(i);
+        }
+    }
+}
