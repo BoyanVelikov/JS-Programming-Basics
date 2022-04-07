@@ -1,0 +1,22 @@
+function operationswithNumbers(firstNumber, secondNumber, operation) {
+    let a = Number(firstNumber);
+    let b = Number(secondNumber);
+    let c = operation;
+
+    if (c === "+") {
+        result = a + b;
+        console.log(`${a} ${c} ${b} = ${result}`);
+    } else if (c === "-") {
+        result = a - b;
+        console.log(`${a} ${c} ${b} = ${result}`);
+    } else if (c === "/") {
+        result = a / b;
+        console.log(`${a} ${c} ${b} = ${result}`);
+    } else if (c === "%") {
+        result = a % b;
+        console.log(`${a} ${c} ${b} = ${result}`);
+    } else if (c === "*") {
+        result = a * b;
+        console.log(`${a} ${c} ${b} = ${result}`);
+    }
+}
