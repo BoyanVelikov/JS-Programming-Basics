@@ -1,14 +1,15 @@
 function zigZagSum(n, numbers) {
-    let numero = Number(n);
-    let oddEven = 0;
+    let a = n;
     let sum = 0;
-    for (i = 1; i <= n; i++) {
-        oddEven = i % 2;
-        if (oddEven == 0) {
-            sum = sum + numbers[i - 1];
+
+    for (let i = 0; i < a; i++) {
+        let element = Number(numbers[i]);
+
+        if (i % 2 === 0) {
+            sum += element;
         } else {
-            sum = sum - Math.abs(numbers[i - 1]);
+            sum -= element;
         }
     }
-    console.log(sum);
+    return sum;
 }
