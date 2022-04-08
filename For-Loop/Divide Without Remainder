@@ -1,0 +1,26 @@
+function divideWithoutRemainder(n, numbers) {
+    let numero = Number(n);
+    let divider2 = 0;
+    let divider3 = 0;
+    let divider4 = 0;
+    for (i = 1; i <= n; i++) {
+        if (numbers[i - 1] % 2 == 0) {
+            divider2++;
+        }
+
+        if (numbers[i - 1] % 3 == 0) {
+            divider3++;
+        }
+
+
+        if (numbers[i - 1] % 4 == 0) {
+            divider4++;
+        }
+    }
+    let firstPercentage = divider2 / n * 100;
+    console.log(`${firstPercentage.toFixed(2)}%`);
+    let secondPercentage = divider3 / n * 100;
+    console.log(`${secondPercentage.toFixed(2)}%`);
+    let thirdPercentage = divider4 / n * 100;
+    console.log(`${thirdPercentage.toFixed(2)}%`);
+}
