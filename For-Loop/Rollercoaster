@@ -1,0 +1,25 @@
+function rollercoaster(input) {
+    let seats = Number(input[0]);
+    let minimumAge = Number(input[1]);
+    let peopleInQueue = Number(input[2]);
+    let d = Number(peopleInQueue + 1);
+    let cycle = peopleInQueue + 3;
+    let x = 0;
+    let y = 0;
+    if (seats > peopleInQueue) {
+        console.log("Waiting...");
+    } else {
+        for (i = 1; i <= peopleInQueue; i++) {
+            if (input[i + 3] >= minimumAge) {
+                y = y + 1;
+            }
+        }
+
+        if (y >= seats) {
+            console.log("The rollercoaster departs");
+        } else {
+            console.log("Waiting...");
+        }
+
+    }
+}
