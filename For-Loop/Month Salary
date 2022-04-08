@@ -1,0 +1,10 @@
+function calculateMonthSalary(days, salaryPerDay) {
+    let a = Number(days);
+    let c = 0;
+
+    for (i = 1; i <= a; i++) {
+        let b = salaryPerDay[i - 1];
+        c += b;
+    }
+    console.log(c);
+}
