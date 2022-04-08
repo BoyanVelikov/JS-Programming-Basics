@@ -1,0 +1,9 @@
+function multiply(input) {
+    let numero = Number(input);
+    let multiply = 0;
+
+    for (i = 1; i <= 10; i++) {
+        multiply = numero * i;
+        console.log(`${numero} x ${i} = ${multiply}`);
+    }
+}
