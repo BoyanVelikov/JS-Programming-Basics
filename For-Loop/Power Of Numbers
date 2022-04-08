@@ -1,0 +1,11 @@
+function powerOfNumbers(p, n) {
+    let a = Number(p);
+    let b = Number(n);
+    let c = b;
+
+    for (i = 1; i < a; i++) {
+        c = b * c;
+    }
+
+    console.log(c);
+}
