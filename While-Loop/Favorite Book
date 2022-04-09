@@ -1,0 +1,17 @@
+function favoriteBook(favoditeBook, books) {
+    let fbook = favoditeBook;
+    let invalidbook = books.shift();
+
+    while (true) {
+
+        if (fbook != invalidbook);
+        console.log(`Invalid book: ${invalidbook}`);
+        invalidbook = books.shift();
+        if (invalidbook == fbook) {
+            break;
+        }
+
+
+    }
+    console.log("Book found!");
+}
