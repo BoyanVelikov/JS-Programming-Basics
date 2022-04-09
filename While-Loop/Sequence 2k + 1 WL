@@ -1,0 +1,15 @@
+function sequence(input) {
+    let num = Number(input);
+    let a = 1;
+    let x = 1;
+    let z = 1;
+    console.log(a);
+    while (a !== num) {
+        a++;
+        x = ((z * 2) + 1);
+        if (x == a) {
+            console.log(a);
+            z = a;
+        }
+    }
+}
