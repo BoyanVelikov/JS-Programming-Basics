@@ -1,0 +1,20 @@
+function specialBonus(n, numbers) {
+    if (Number.isInteger(n)) {
+        let num = Number(n);
+        let x = numbers.shift();
+        let previousNumber = 0;
+        let count = 0;
+
+        while (num !== x) {
+            previousNumber = x;
+            x = numbers.shift();
+            count++;
+            if (x == undefined) {
+                break;
+            }
+        }
+        if (x !== undefined) {
+            console.log(previousNumber * 2);
+        }
+    }
+}
