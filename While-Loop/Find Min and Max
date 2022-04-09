@@ -1,0 +1,21 @@
+function minAndMax(input) {
+    let symbol = input[0];
+    let x = Number("END");
+    let maxNumber = Number(input[0]);
+    let minNumber = Number(input[0]);
+
+    while (symbol !== "END") {
+
+        if (Number(symbol) > maxNumber) {
+            maxNumber = Number(symbol);
+        } else if (Number(symbol) <= minNumber) {
+            minNumber = Number(symbol);
+        }
+
+        symbol = (input.shift());
+    }
+
+
+    console.log(`Max number: ${maxNumber}`);
+    console.log(`Min number: ${minNumber}`);
+}
