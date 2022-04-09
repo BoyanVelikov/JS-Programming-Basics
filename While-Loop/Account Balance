@@ -1,0 +1,12 @@
+function accountBalance(input) {
+    let num = input.shift();
+    let x = 0;
+    let total = 0;
+    while (num !== "END") {
+        x = Number(num).toFixed(2);
+        console.log(`Increase: ${x}`);
+        total = total + Number(num);
+        num = input.shift();
+    }
+    console.log(`Total: ${total.toFixed(2)}`);
+}
