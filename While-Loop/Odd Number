@@ -1,0 +1,8 @@
+function oddNumber(numbers) {
+    let n = numbers[0];
+    while (n % 2 == 0) {
+        numbers.shift();
+        n = numbers[0];
+    }
+    console.log(n);
+}
