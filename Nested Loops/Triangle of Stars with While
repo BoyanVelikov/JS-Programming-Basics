@@ -1,0 +1,15 @@
+function triangleOfStars(input) {
+    let height = Number(input);
+    let i = 1;
+    let k = 1;
+    while (i <= height) {
+        s = "";
+        k = 1;
+        while (k <= i) {
+            s += "*";
+            k++;
+        }
+        console.log(s);
+        i++;
+    }
+}
