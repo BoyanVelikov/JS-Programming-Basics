@@ -1,0 +1,29 @@
+function building(floors, rooms) {
+    let flNum = Number(floors);
+    let rNum = Number(rooms);
+
+    for (let i = flNum; i >= 1; i--) {
+        let s = "";
+        let oddEven = i % 2;
+        if (i == flNum) {
+            let h = "";
+            for (let k = 0; k < rNum; k++) {
+                h += (`L${i}${k} `);
+            }
+            console.log(h);
+
+        } else if (oddEven != 0 && i != flNum) {
+            let g = "";
+            for (let k = 0; k < rNum; k++) {
+                g += (`A${i}${k} `);
+            }
+            console.log(g);
+
+        } else if (oddEven == 0 && i != flNum) {
+            for (let k = 0; k < rNum; k++) {
+                s += (`O${i}${k} `);
+            }
+            console.log(s);
+        }
+    }
+}
