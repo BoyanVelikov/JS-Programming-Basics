@@ -1,0 +1,20 @@
+function letterCombinations(firstLetter, lastLetter, missedLetter) {
+    let x = firstLetter.charCodeAt(0);
+    let y = lastLetter.charCodeAt(0);
+    let z = missedLetter.charCodeAt(0);
+    let print = '';
+    let counter = 0;
+
+    for (i = x; i <= y; i++) {
+        for (k = x; k <= y; k++) {
+            for (j = x; j <= y; j++) {
+                if (i != z && k != z && j != z) {
+                    counter++;
+                    print += String.fromCharCode(i) + '' + String.fromCharCode(k) + '' + String.fromCharCode(j) + " ";
+
+                }
+            }
+        }
+    }
+    console.log(print + counter);
+}
