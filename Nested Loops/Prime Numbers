@@ -1,0 +1,21 @@
+function primeNumbers(firstNumber, secondNumber) {
+    let bNumber = Number(firstNumber);
+    let eNumber = Number(secondNumber);
+    let result = "";
+    if (bNumber == 1) {
+        result = +(bNumber);
+    }
+    for (i = bNumber; i <= secondNumber; i++) {
+        counter = 0;
+        for (k = 1; k <= i; k++) {
+            let a = i % k;
+            if (a == 0) {
+                counter++;
+            }
+        }
+        if (counter == 2) {
+            result += (" " + i);
+        }
+    }
+    console.log(result);
+}
