@@ -1,0 +1,15 @@
+function magicNumber(input) {
+    let x = Number(input);
+    for (i = 100; i <= 999; i++) {
+        let num = i;
+        let result = 1;
+
+        while (num > 0) {
+            result *= num % 10;
+            num = Math.floor(num / 10);
+        }
+        if (result == x) {
+            console.log(i);
+        }
+    }
+}
