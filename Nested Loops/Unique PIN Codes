@@ -1,0 +1,26 @@
+function uniquePinCodes(firstNumber, secondNumber, thirdNumber) {
+    let fNum = Number(firstNumber);
+    let sNum = Number(secondNumber);
+    let tNum = Number(thirdNumber);
+    let s = "";
+    let final = "";
+
+    for (i = 1; i <= fNum; i++) {
+        let check1 = i % 2;
+        if (check1 == 0) {
+
+            for (k = 1; k <= sNum; k++) {
+                if (k == 2 || k == 3 || k == 5 || k == 7) {
+                    for (j = 1; j <= tNum; j++) {
+                        let check2 = j % 2;
+                        if (check2 == 0) {
+                            s += (`${i}${k}${j}`);
+                            console.log(`${s} `);
+                            s = "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
