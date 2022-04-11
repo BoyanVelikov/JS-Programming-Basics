@@ -1,0 +1,23 @@
+function travelling(input) {
+    let dest = input[0];
+    let budget = Number(input[1]);
+    let neededBudget = 0;
+    let index = 1;
+
+    while (dest !== 'End') {
+        index++;
+        while (neededBudget < budget) {
+            neededBudget += Number(input[index]);
+            index++;
+        }
+
+        console.log(`Going to ${dest}!`);
+
+        dest = input[index++];
+
+        budget = Number(input[index]);
+
+        neededBudget = 0;
+
+    }
+}
