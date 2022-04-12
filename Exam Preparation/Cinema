@@ -1,0 +1,53 @@
+function cinema(input) {
+    let movie = input[0];
+    let consumables = input[1];
+    let tickets = input[2];
+    let bill = 0;
+
+    if (movie === "Star Wars") {
+        if (tickets >= 4) {
+            if (consumables === "Drink") {
+                bill = (tickets * 18) * 0.70;
+            } else if (consumables === "Popcorn") {
+                bill = (tickets * 25) * 0.70;
+            } else if (consumables === "Menu") {
+                bill = (tickets * 30) * 0.70;
+            }
+        } else {
+            if (consumables === "Drink") {
+                bill = (tickets * 18);
+            } else if (consumables === "Popcorn") {
+                bill = (tickets * 25);
+            } else if (consumables === "Menu") {
+                bill = (tickets * 30);
+            }
+        }
+    } else if (movie === "Jumanji") {
+        if (tickets == 2) {
+            if (consumables === "Drink") {
+                bill = (tickets * 9) * 0.85;
+            } else if (consumables === "Popcorn") {
+                bill = (tickets * 11) * 0.85;
+            } else if (consumables === "Menu") {
+                bill = (tickets * 14) * 0.85;
+            }
+        } else {
+            if (consumables === "Drink") {
+                bill = (tickets * 9);
+            } else if (consumables === "Popcorn") {
+                bill = (tickets * 11);
+            } else if (consumables === "Menu") {
+                bill = (tickets * 14);
+            }
+        }
+    } else if (movie === "John Wick") {
+        if (consumables === "Drink") {
+            bill = (tickets * 12);
+        } else if (consumables === "Popcorn") {
+            bill = (tickets * 15);
+        } else if (consumables === "Menu") {
+            bill = (tickets * 19);
+        }
+    }
+    console.log(`Your bill is ${bill.toFixed(2)}$`);
+}
