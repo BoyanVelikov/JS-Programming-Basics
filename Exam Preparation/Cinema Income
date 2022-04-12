@@ -1,0 +1,30 @@
+function cinemaIncome(input) {
+    let capacity = Number(input.shift());
+    let command = input.shift();
+    let seatLeft = capacity;
+
+    let currentPrice = 0;
+    let totalPrice = 0;
+
+    while (command !== 'Movie time!') {
+        let numberOfPeople = Number(command);
+        if (numberOfPeople > seatLeft) {
+            console.log("The cinema is full.");
+            break;
+        }
+        currentPrice = numberOfPeople * 5;
+        if (numberOfPeople % 3 === 0) {
+            currentPrice -= 5;
+        }
+
+        totalPrice += currentPrice;
+        seatLeft -= numberOfPeople;
+        command = input.shift();
+    }
+
+    if (command === 'Movie time!') {
+        console.log(`There are ${seatLeft} seats left in the cinema.`);
+    }
+    console.log(`Cinema income - ${totalPrice}$`);
+
+}
