@@ -1,0 +1,42 @@
+function movie(input) {
+    let movieName = input.shift();
+    let counter = 0;
+    let bestMoviePoints = 0;
+    let currentMoviePoints = 0;
+    let bestMovieName = "";
+    let lowerCaseCount = 0;
+    let upperCaseCount = 0;
+
+
+    while (movieName !== 'STOP') {
+        counter++;
+        if (counter >= 7) {
+            break;
+        }
+
+        for (let i = 0; i < movieName.length; i++) {
+            let currentChar = movieName.charCodeAt(i);
+            currentMoviePoints += currentChar;
+
+            if (currentChar >= 65 && currentChar <= 90) {
+                currentMoviePoints -= movieName.length;
+            } else if (currentChar >= 97 && currentChar <= 122) {
+                currentMoviePoints -= movieName.length * 2;
+            }
+        }
+
+        if (currentMoviePoints > bestMoviePoints) {
+            bestMoviePoints = currentMoviePoints;
+            bestMovieName = movieName;
+        }
+
+        currentMoviePoints = 0;
+        movieName = input.shift();
+
+
+    }
+    if (counter >= 7) {
+        console.log("Title limit has been reached.");
+    }
+    console.log(`The best movie for you is ${bestMovieName} its ASCII sum is: ${bestMoviePoints}.`);
+}
