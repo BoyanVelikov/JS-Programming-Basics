@@ -1,0 +1,58 @@
+function energyBooster(input) {
+    let flavor = input[0];
+    let cutSize = input[1];
+    let orderedCuts = input[2];
+
+    let priceSmall = 0;
+    let priceBig = 0;
+    let orderAmount = 0;
+    let finalAmount = 0;
+
+    if (cutSize == "small") {
+
+        switch (flavor) {
+            case "Watermelon":
+                price = 56;
+                break;
+            case "Mango":
+                price = 36.66;
+                break;
+            case "Pineapple":
+                price = 42.10;
+                break;
+            case "Raspberry":
+                price = 20;
+                break;
+        }
+        orderAmount = 2 * price * orderedCuts;
+    } else if (cutSize == "big") {
+
+        switch (flavor) {
+            case "Watermelon":
+                price = 28.70;
+                break;
+            case "Mango":
+                price = 19.60;
+                break;
+            case "Pineapple":
+                price = 24.80;
+                break;
+            case "Raspberry":
+                price = 15.20;
+                break;
+
+        }
+        orderAmount = 5 * price * orderedCuts;
+    }
+
+    if (orderAmount >= 400 && orderAmount <= 1000) {
+        finalAmount = orderAmount * 0.85;
+        console.log(`${finalAmount.toFixed(2)} dollars.`);
+    } else if (orderAmount > 1000) {
+        finalAmount = orderAmount * 0.50;
+        console.log(`${finalAmount.toFixed(2)} dollars.`);
+    } else {
+        finalAmount = orderAmount;
+        console.log(`${finalAmount.toFixed(2)} dollars.`);
+    }
+}
