@@ -1,0 +1,19 @@
+function careOfPuppy(input) {
+    let foodAmount = Number(input.shift());
+    let foodAmountGrams = foodAmount * 1000;
+    let foodCount = 0;
+
+    let nextElement = input.shift();
+
+    while (nextElement !== 'Adopted') {
+        foodCount += nextElement;
+        nextElement = input.shift();
+    }
+
+    if (foodAmountGrams >= foodCount) {
+        console.log(`Food is enough! Leftovers: ${foodAmountGrams - foodCount} grams.`);
+    } else if (foodAmountGrams < foodCount) {
+        console.log(`Food is not enough. You need ${foodCount - foodAmountGrams} grams more.`)
+    }
+
+}
