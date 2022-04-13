@@ -1,0 +1,17 @@
+function mountainRun(input) {
+  let oldRecord = Number(input[0]);
+  let distance = Number(input[1]);
+  let timeNeededMeter = Number(input[2]);
+  let difference = 0;
+
+  let slow = Math.floor(distance / 50);
+  let hisTime = (distance * timeNeededMeter) + slow * 30;
+
+  if (hisTime < oldRecord) {
+    console.log(`Yes! The new record is ${hisTime.toFixed(2)} seconds.`)
+  } else {
+    difference = hisTime - oldRecord;
+    console.log(`No! He was ${difference.toFixed(2)} seconds slower.`)
+  }
+  
+}
