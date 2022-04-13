@@ -1,0 +1,32 @@
+function foodForPets(input) {
+    let days = input.shift();
+    let totalFood = input.shift();
+    let dogEat = 0;
+    let catEat = 0;
+    let dogEatCount = 0;
+    let catEatCount = 0;
+    let foodTotalEaten = 0;
+    let daysCount = 0;
+    let cookies = 0;
+
+    for (let i = 1; i <= days; i++) {
+        dogEat = input.shift();
+        catEat = input.shift();
+        dogEatCount += dogEat;
+        catEatCount += catEat;
+        if (i % 3 == 0) {
+            cookies += (dogEat + catEat) * 0.10;
+        }
+    }
+
+    foodTotalEaten = dogEatCount + catEatCount;
+    let foodPercentage = foodTotalEaten / totalFood;
+    let dogPercentage = dogEatCount / foodTotalEaten;
+    let catPercentaga = catEatCount / foodTotalEaten;
+
+    console.log(`Total eaten biscuits: ${cookies.toFixed()}gr.`);
+    console.log(`${(foodPercentage * 100).toFixed(2)}% of the food has been eaten.`);
+    console.log(`${(dogPercentage * 100).toFixed(2)}% eaten from the dog.`);
+    console.log(`${(catPercentaga * 100).toFixed(2)}% eaten from the cat.`);
+
+}
